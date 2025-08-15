@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    font-family: 'Manrope';
+}
+
+ul {
+    list-style: none;
+}
+
+body {
+    font-family: 'Manrope';
+    margin: 0;
+    padding: 0;
+    background: var(--shades);
+}
+
+.arebic-lang {
+    .choose-payment-plan {
+
+        .banner-title {
+            h1 {
+                font-size: 51px !important;
+            }
+
+            span {
+                margin-right: 8px;
+            }
+        }
+
+        .payment-plans-list {
+            .plan-item {
+                &:not(:last-child)::after {
+                    right: 7px;
+                }
+            }
+        }
+    }
+}

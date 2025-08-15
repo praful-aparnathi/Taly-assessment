@@ -1,0 +1,24 @@
+<div class="payment-plans-container" [class.selected]="isSelected">
+  <h4>{{title}}</h4>
+  <ul class="payment-plans-list">
+    @for (plan of paymentPlans ?? []; track $index) {
+    <li class="plan-item">
+      <div class="plan">
+        <img [src]="plan.logo" alt="Payment plan" class="plan-logo">
+        <span class="plan-date"> {{ displayAmount(plan.date, currency) }}</span>
+      </div>
+      <div class="plan-amount">
+        {{ displayAmount(plan.amount, currency) }}
+      </div>
+    </li>
+    } @empty {
+    <li class="no-plans">No payment plans available</li>
+    }
+
+  </ul>
+  <div class="select-plan" (click)="onSelectPlan()">
+    <button translate>SELECT_BUTTON</button>
+
+  </div>
+
+</div>

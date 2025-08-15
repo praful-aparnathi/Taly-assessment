@@ -1,0 +1,129 @@
+.choose-payment-plan {
+
+    max-width: 1024px;
+    margin: 0 auto;
+    border-radius: 16px;
+    padding: 32px;
+    margin-bottom: 60px;
+
+    .banner-title {
+        margin-bottom: 48px;
+
+        h1 {
+            color: var(--white);
+            font-size: 42px;
+            font-weight: 800;
+            line-height: 58px;
+            letter-spacing: -1;
+            vertical-align: middle;
+            margin-bottom: 16px;
+        }
+
+        img {
+            vertical-align: middle;
+        }
+
+        span {
+            font-size: 16px;
+            line-height: 28px;
+            letter-spacing: -1%;
+            font-weight: 400;
+            color: var(--white);
+            margin-left: 8px;
+        }
+    }
+
+    .plans-and-details {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 2rem;
+        min-height: 716px;
+
+        .order-details {
+            h2 {
+                font-size: 16px;
+                line-height: 24px;
+                font-weight: 600;
+                color: var(--white);
+                margin-bottom: 18px;
+            }
+        }
+    }
+}
+
+.left-column {
+    flex: 1;
+    background-image: url("/assets/images/banner-bg.svg");
+    background-size: cover;
+    background-position: center;
+    padding: 32px;
+    border-radius: 8px;
+    color: var(--white);
+}
+
+.payment-plans-wrapper {
+    background: var(--white);
+    padding: 32px;
+    flex: 1;
+    border-radius: 16px;
+
+    .split-plan {
+        margin-bottom: 32px;
+    }
+}
+
+@media (max-width: 768px) {
+    .choose-payment-plan {
+        margin: 0 auto;
+        padding: 0 20px 20px 20px;
+
+        .plans-and-details {
+            flex-direction: column;
+            gap: 0px;
+
+            .banner-title {
+                margin-bottom: 20px;
+                margin-top: 5rem;
+
+                h1 {
+                    font-size: 28px;
+                    line-height: 40px;
+                    font-weight: 700;
+                    max-width: 335px;
+
+                }
+
+                span {
+                    font-size: 14px;
+                }
+            }
+        }
+
+        .order-details {
+            display: none;
+        }
+
+        .left-column {
+            background-image: url("/assets/images/banner-bg.svg");
+            border-radius: 0;
+            width: 100%;
+            border-radius: 0;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: top center;
+
+        }
+
+
+        .payment-plans-wrapper {
+            width: 100%;
+            background: none;
+
+            .split-plan {
+                margin-bottom: 14px;
+            }
+
+        }
+    }
+}

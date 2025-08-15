@@ -1,0 +1,55 @@
+.order-detail {
+    border-radius: 12px;
+    padding: 12px 16px;
+    background: var(--dark-black);
+
+    .store-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .item-name {
+            font-weight: 600;
+            font-style: Bold;
+            font-size: 16px;
+            line-height: 24px;
+            letter-spacing: -1%;
+            vertical-align: middle;
+            color: var(--white);
+
+        }
+
+        .store-info {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .store-total {
+            .order-vat {
+                font-weight: 400;
+                font-style: Medium;
+                font-size: 12px;
+                line-height: 20px;
+                letter-spacing: 0%;
+                vertical-align: middle;
+                color: var(--white);
+                &.order-amount{
+                    display: none;
+                }
+
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .store-total {
+        .order-amount {
+            display: block!important;
+        }
+        .vat-note {
+            display: none;
+        }
+    }
+}

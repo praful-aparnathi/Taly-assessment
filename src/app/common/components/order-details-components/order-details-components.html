@@ -1,0 +1,25 @@
+<!-- order-details-components.html -->
+<div class="order-item">
+  <ul class="items">
+    @for (item of orderData.items; track $index) {
+    <li>
+      {{ item.name }}
+      <span>{{ orderData.currency }} {{ item.price }}</span>
+    </li>
+    }
+  </ul>
+  <div class="order-summary">
+    <div class="summary-row">
+      <span translate>SUB_TOTAL</span>
+      <span>{{ orderData?.currency }} {{ orderData?.subTotal }} </span>
+    </div>
+    <div class="summary-row">
+      <span translate>SHIPPING</span>
+      <span>{{ orderData?.currency }} {{ orderData?.shipping }} </span>
+    </div>
+    <div class="summary-row">
+      <span translate>SHIPPING_DISCOUNT</span>
+      <span>{{ orderData?.currency }} {{orderData?.discount_amount}}</span>
+    </div>
+  </div>
+</div>

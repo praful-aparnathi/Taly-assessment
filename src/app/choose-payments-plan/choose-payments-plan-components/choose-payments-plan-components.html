@@ -1,0 +1,46 @@
+<div class="choose-payment-plan"  >
+  <section class="plans-and-details">
+    <!-- LEFT COLUMN -->
+    <div class="left-column">
+      <div class="banner-title">
+        <h1 translate>CHOOSE_PAYMENT</h1>
+        <ul class="features-list">
+          <li>
+            <img src="assets/images/correct-icon.svg" alt="Correct Icon" />
+            <span translate>ZERO_INTEREST</span>
+          </li>
+          <li>
+            <img src="assets/images/correct-icon.svg" alt="Correct Icon" />
+            <span translate>SHARIA_COMPLIANT</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="order-detail-wrapper">
+        <div class="order-details">
+          <h2 translate>ORDER_DETAILS</h2>
+          <app-order-details [orderData]="orderDetails"></app-order-details>
+        </div>
+
+        <div class="product-details">
+          <app-product-details-components [productDetails]="productDetails"></app-product-details-components>
+        </div>
+      </div>
+    </div>
+    <!-- RIGHT COLUMN -->
+    <div class="payment-plans-wrapper right-column">
+      <div class="split-plan payment-plans">
+        <app-payment-plan-option [title]="'SPLIT_IN_FOUR' | translate" [paymentPlans]="splitPlan"
+          [currency]="order.currency" [isSelected]="selectedPlanType === 'split'"
+          (selectPlan)="onPlanSelect($event, 'split')">
+        </app-payment-plan-option>
+      </div>
+      <div class="in-30-days payment-plans">
+        <app-payment-plan-option [title]="'PAY_IN_30_DAYS' | translate" [paymentPlans]="todayPlan"
+          [currency]="order.currency" [isSelected]="selectedPlanType === 'today'"
+          (selectPlan)="onPlanSelect($event, 'today')">
+        </app-payment-plan-option>
+      </div>
+    </div>
+  </section>
+</div>

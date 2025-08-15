@@ -1,0 +1,17 @@
+<div class="order-detail">
+  <div class="store-header">
+    <div class="store-info">
+      <img class="store-logo" [src]="productDetails?.logo" alt="store logo" />
+      <span class="item-name">{{ productDetails?.productName }}</span>
+    </div>
+    <div class="store-total">
+      @if(productDetails){
+
+        <span class="item-name">{{productDetails?.currency}} {{ productDetails?.productPrice }}</span>
+      }
+      <div class="vat-note  order-vat" translate>INCLUDING_VAT</div>
+      <div class="order-amount order-vat" translate>ORDER_AMOUNT</div>
+    </div>
+
+  </div>
+</div>

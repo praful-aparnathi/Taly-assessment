@@ -1,0 +1,103 @@
+.payment-plans-container {
+    padding: 18px;
+    border-radius: 8px;
+    border: 1px solid var(--border-shades);
+    transition: border 0.2s ease;
+    &.selected {
+        border: 1px solid var(--brand-taly-sky-dialog-shade);
+        border-radius: 8px;
+    }
+    h4 {
+        font-weight: 700;
+        font-style: Bold;
+        font-size: 24px;
+        line-height: 36px;
+        letter-spacing: -1%;
+        vertical-align: middle;
+        color: var(--text-title);
+    }
+    .payment-plans-list {
+        margin-top: 10px;
+        margin-bottom: 20px;
+        .plan-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 24px;
+            letter-spacing: -1%;
+            vertical-align: middle;
+            color: var(--primary-color);
+            position: relative;
+            padding-bottom: 24px;
+            &:first-child {
+                font-weight: 700;
+                font-style: Bold;
+                font-size: 16px;
+                color: var(--dark-shades);
+            }
+            &:not(:last-child)::after {
+                content: "";
+                position: absolute;
+                left: 7px;
+                bottom: 0;
+                width: 2px;
+                height: 14px;
+                top: 1.8rem;
+                border-radius: 8px;
+                background: var(--button-border);
+            }
+            .plan {
+                display: inline-flex;
+                align-items: center;
+                gap: 12px;
+            }
+        }
+    }
+    .select-plan {
+        border-radius: 40px;
+        gap: 8px;
+        opacity: 1;
+        border-width: 1px;
+        padding: 13px 20px;
+        text-align: center;
+        border: 1px solid var(--button-border);
+        cursor: pointer;
+        
+        button {
+            font-weight: 700;
+            font-style: Bold;
+            font-size: 16px;
+            line-height: 24px;
+            letter-spacing: -1%;
+            text-align: center;
+            vertical-align: bottom;
+            color: var(--text-title);
+            border: none;
+            background: transparent;
+            cursor: pointer;
+        }
+
+    }
+
+}
+:host ::ng-deep {
+.arebic-lang{
+    .payment-plans-list {
+        .plan-item {
+            &:first-child {
+            }
+            &:not(:last-child)::after {
+                right: 7px;
+            }
+        }
+    } 
+}
+}
+@media (max-width: 768px) {
+    .payment-plans-container {
+        background: var(--white);
+        border-radius:16px;
+    }
+}

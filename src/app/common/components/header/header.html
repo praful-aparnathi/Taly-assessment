@@ -1,0 +1,29 @@
+<section class="header-nav" [dir]="textDirection" [class.arebic-lang]="textDirection == 'rtl'">
+    <header>
+        <ul class="light-banner">
+            <li>
+
+                <img src="assets/images/taly-light-logo.svg" alt="Taly Logo">
+            </li>
+            <li (click)="toggleLanguage()">
+                <div class="language">
+                    <label for="lang" class="language-name" translate>LANGUAGE</label>
+                </div>
+            </li>
+        </ul>
+        <ul class="transparent-banner">
+            <li>
+
+                <img src="assets/images/back-icon.svg" alt="Taly Logo">
+                <div class="language" (click)="toggleLanguage()">
+                    <label for="lang" class="language-name" translate>LANGUAGE</label>
+                </div>
+            </li>
+            <li>
+                <img src="assets/images/lock-icon.svg" alt="Lock-icon"> <span translate>PAYMENT_WITH</span>
+                <img src="assets/images/taly-dark-logo.svg" alt="Dark-logo">
+            </li>
+        </ul>
+
+    </header>
+</section>

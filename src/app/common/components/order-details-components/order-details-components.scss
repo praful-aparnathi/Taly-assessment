@@ -1,0 +1,42 @@
+.order-item {
+    .items {
+        padding-bottom: 34px;
+
+        li {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 14px;
+            color: var(--white);
+            line-height: 24px;
+            font-weight: 400;
+
+            &:not(:last-child) {
+                padding-bottom: 16px;
+            }
+        }
+    }
+
+    .order-summary {
+        padding-bottom: 60px;
+        .summary-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+               &:not(:last-child) {
+                padding-bottom: 18px;
+            }
+
+            span {
+                font-weight: 500;
+                font-style: SemiBold;
+                font-size: 14px;
+                line-height: 16px;
+                letter-spacing: -1%;
+                vertical-align: middle;
+                color: var(--white);
+
+            }
+        }
+    }
+}
